@@ -3,9 +3,9 @@ id_pattern = re.compile(r'^.\d+$')
 
 class Config(object):
     # pyro client config
-    API_ID    = os.environ.get("API_ID", "")
-    API_HASH  = os.environ.get("API_HASH", "")
-    BOT_TOKEN = os.environ.get("BOT_TOKEN", "") 
+    API_ID    = os.environ.get("API_ID", "25926022")
+    API_HASH  = os.environ.get("API_HASH", "30db27d9e56d854fb5e943723268db32")
+    BOT_TOKEN = os.environ.get("BOT_TOKEN", "7920699861:AAH2CXFZUbTyST4E9Llx9TFHqoDZWkLabdg") 
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","auto")     
@@ -13,10 +13,10 @@ class Config(object):
  
     # other configs
     BOT_UPTIME  = time.time()
-    START_PIC   = os.environ.get("START_PIC", "https://graph.org/file/4b306f4b15c23a8f22e58.jpg")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '').split()]
-    FORCE_SUB   = os.environ.get("FORCE_SUB", "") 
-    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", ""))
+    START_PIC   = os.environ.get("START_PIC", "https://envs.sh/vrl.jpg")
+    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6475872631', '7428552084').split()]
+    FORCE_SUB   = os.environ.get("FORCE_SUB", "AMAZON_ANIME") 
+    LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002289696049"))
     
     # wes response configuration     
     WEBHOOK = bool(os.environ.get("WEBHOOK", "True"))
@@ -25,51 +25,48 @@ class Config(object):
 class Txt(object):
     # part of text configuration
         
-    START_TXT = """Hello {} 
+    START_TXT = """Salut {} 
     
-➻ This Is An Advanced And Yet Powerful Rename Bot.
-    
-➻ Using This Bot You Can Auto Rename Of Your Files.
-    
-➻ This Bot Also Supports Custom Thumbnail And Custom Caption.
-    
-➻ Use /tutorial Command To Know How To Use Me.
-    
-<b>Bot Is Made By @Madflix_Bots</b>"""
-    
-    FILE_NAME_TXT = """<b><u>SETUP AUTO RENAME FORMAT</u></b>
+➻ Ceci est un bot de renommage avancé et puissant.
+  
+➻ Avec ce bot, vous pouvez renommer automatiquement vos fichiers.  
 
-Use These Keywords To Setup Custom File Name
+➻ Ce bot prend également en charge les miniatures personnalisées et les légendes personnalisées.  
 
-✓ episode :- To Replace Episode Number
-✓ quality :- To Replace Video Resolution
-
-<b>➻ Example :</b> <code> /autorename Naruto Shippuden S02 - EPepisode - quality  [Dual Audio] - @Madflix_Bots </code>
-
-<b>➻ Your Current Auto Rename Format :</b> <code>{format_template}</code> """
+➻ Utilisez la commande /tutorial pour savoir comment m'utiliser."""
     
-    ABOUT_TXT = f"""<b>🤖 My Name :</b> <a href='https://t.me/AutoRenameXBot'>Auto Rename Bot ⚡</a>
+    FILE_NAME_TXT = """<b><u>ÉTAPE D'AUTO RENAME</u></b>
+
+Utilisez ces mots-clés pour configurer un nom de fichier personnalisé :
+
+✓ episode :- Pour remplacer le numéro de l'épisode  
+✓ quality :- Pour remplacer la résolution vidéo  
+
+<b>➻ Example :</b> <code> /autorename Naruto Shippuden S02 - EPepisode - qualité  [Doublage Audio] - @Otakukingcey1 </code>
+
+<b>➻ Votre Format d'auto rename :</b> <code>{format_template}</code> """
+    
+    ABOUT_TXT = f"""<b>🤖 Mon Nom :</b> <a href='http://t.me/Henco_autorenamebot'>Auto Rename Bot ⚡</a>
 <b>📝 Language :</b> <a href='https://python.org'>Python 3</a>
 <b>📚 Library :</b> <a href='https://pyrogram.org'>Pyrogram 2.0</a>
-<b>🚀 Server :</b> <a href='https://heroku.com'>Heroku</a>
-<b>📢 Channel :</b> <a href='https://t.me/Madflix_Bots'>Madflix Botz</a>
-<b>🧑‍💻 Developer :</b> <a href='https://t.me/CallAdminRobot'>Jishu Developer</a>
+<b>🚀 Server :</b> <a href='https://t.me/Otakukingcey1'>KGC</a>
+<b>📢 Chaine :</b> <a href='https://t.me/otakukingcey1'>Kingcey</a>
+<b>🧑‍💻 Developer :</b> <a href='https://t.me/Kingcey'>AntiFlix</a>
     
-<b>♻️ Bot Made By :</b> @Madflix_Bots"""
+<b>♻️ Bot crée par :</b> @Otakukingcey1 """
 
     
-    THUMBNAIL_TXT = """<b><u>🖼️  HOW TO SET THUMBNAIL</u></b>
+    THUMBNAIL_TXT = """<b><u>🖼️  Comment utiliser La Vignette</u></b>
     
-⦿ You Can Add Custom Thumbnail Simply By Sending A Photo To Me....
-    
-⦿ /viewthumb - Use This Command To See Your Thumbnail
-⦿ /delthumb - Use This Command To Delete Your Thumbnail"""
+⦿ Vous pouvez ajouter une miniature personnalisée simplement en m'envoyant une photo...  
+⦿ /viewthumb - Utilisez cette commande pour voir votre miniature  
+⦿ /delthumb - Utilisez cette commande pour supprimer votre miniature"""
 
-    CAPTION_TXT = """<b><u>📝  HOW TO SET CAPTION</u></b>
+    CAPTION_TXT = """<b><u>📝  COMMENT AJOUTER UNE LÉGENDE</u></b>
     
-⦿ /set_caption - Use This Command To Set Your Caption
-⦿ /see_caption - Use This Command To See Your Caption
-⦿ /del_caption - Use This Command To Delete Your Caption"""
+⦿ /set_caption - Utilisez cette commande pour définir votre légende  
+⦿ /see_caption - Utilisez cette commande pour voir votre légende  
+⦿ /del_caption - Utilisez cette commande pour supprimer votre légende"""
 
     PROGRESS_BAR = """\n
 <b>📁 Size</b> : {1} | {2}
@@ -78,15 +75,15 @@ Use These Keywords To Setup Custom File Name
 <b>⏰️ ETA</b> : {4} """
     
     
-    DONATE_TXT = """<b>🥲 Thanks For Showing Interest In Donation! ❤️</b>
+    DONATE_TXT = """<b>🥲 Merci pour être intéressé à la donation! ❤️</b>
     
-If You Like My Bots & Projects, You Can 🎁 Donate Me Any Amount From 10 Rs Upto Your Choice.
+Si vous aimez mes bots et projets, vous pouvez 🎁 me faire un don de n'importe quel montant à partir de 1 ou 500f euros jusqu'à ce que vous le souhaitiez.
     
 <b>🛍 UPI ID:</b> <code>madflixofficial@axl</code> """
     
     HELP_TXT = """<b>Hey</b> {}
     
-Here Is The Help For My Commands."""
+Ici, c'est juste l'aide pour mes commandes."""
 
 
 
@@ -96,4 +93,3 @@ Here Is The Help For My Commands."""
 # Don't Remove Credit 🥺
 # Telegram Channel @Madflix_Bots
 # Developer @JishuDeveloper
-
