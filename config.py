@@ -14,7 +14,7 @@ class Config(object):
     # other configs
     BOT_UPTIME  = time.time()
     START_PIC   = os.environ.get("START_PIC", "https://envs.sh/vrl.jpg")
-    ADMIN       = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6475872631', '7428552084').split()]
+    ADMIN = [int(admin) if id_pattern.search(admin) else admin for admin in os.environ.get('ADMIN', '6475872631,7428552084').split(',')]
     FORCE_SUB   = os.environ.get("FORCE_SUB", "AMAZON_ANIME") 
     LOG_CHANNEL = int(os.environ.get("LOG_CHANNEL", "-1002289696049"))
     
