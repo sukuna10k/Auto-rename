@@ -9,7 +9,7 @@ class Config(object):
 
     # database config
     DB_NAME = os.environ.get("DB_NAME","auto")     
-    DB_URL  = os.environ.get("DB_URL","mongodb+srv://auto:autoren@auto.0igu7.mongodb.net/?retryWrites=true&w=majority&appName=auto")
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://kingcey:kgcbot@kingcey.3ntlw.mongodb.net/?retryWrites=true&w=majority&appName=kingcey")
  
     # other configs
     BOT_UPTIME  = time.time()
