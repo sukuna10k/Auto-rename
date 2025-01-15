@@ -8,8 +8,8 @@ class Config(object):
     BOT_TOKEN = os.environ.get("BOT_TOKEN", "7651245111:AAFO09GZZWMhP1-OLGzxVX6gzFVz6jCEPbU") 
 
     # database config
-    DB_NAME = os.environ.get("DB_NAME","auto")     
-    DB_URL  = os.environ.get("DB_URL","mongodb+srv://kingcey:kgcbot@kingcey.3ntlw.mongodb.net/?retryWrites=true&w=majority&appName=kingcey")
+    DB_NAME = os.environ.get("DB_NAME","aniflix")     
+    DB_URL  = os.environ.get("DB_URL","mongodb+srv://Aniflix:Lipun123@aniflix.q2wina5.mongodb.net/?retryWrites=true&w=majority&appName=Aniflix")
  
     # other configs
     BOT_UPTIME  = time.time()
